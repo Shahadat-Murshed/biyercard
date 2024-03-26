@@ -10,7 +10,7 @@
         <a class="navbar-brand navbar-brand-desktop" href="/">
             <img class="side-nav-show-on-closed" src="{{ asset('backend/public') }}/img/logo-mini.png" alt="Graindashboard"
                 style="width: auto; height: 33px;">
-            <img class="side-nav-hide-on-closed" src="{{ asset('backend/public') }}/img/logo.png" alt="Graindashboard"
+            <img class="side-nav-hide-on-closed" src="{{ asset('backend/public') }}/img/logo-light.png" alt="Graindashboard"
                 style="width: auto; height: 33px;">
         </a>
         <!-- End Logo For Desktop View -->
