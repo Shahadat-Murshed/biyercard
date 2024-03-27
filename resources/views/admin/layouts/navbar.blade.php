@@ -2,16 +2,16 @@
     <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
         <!-- Logo For Mobile View -->
         <a class="navbar-brand navbar-brand-mobile" href="/">
-            <img class="img-fluid w-100" src="{{ asset('backend/public') }}/img/logo-mini.png" alt="Graindashboard">
+            <img class="img-fluid w-100" src="{{ asset('backend/public') }}/img/logo-mini.png" alt="Biyercard">
         </a>
         <!-- End Logo For Mobile View -->
 
         <!-- Logo For Desktop View -->
         <a class="navbar-brand navbar-brand-desktop" href="/">
-            <img class="side-nav-show-on-closed" src="{{ asset('backend/public') }}/img/logo-mini.png" alt="Graindashboard"
-                style="width: auto; height: 33px;">
-            <img class="side-nav-hide-on-closed" src="{{ asset('backend/public') }}/img/logo-light.png" alt="Graindashboard"
-                style="width: auto; height: 33px;">
+            <img class="side-nav-show-on-closed" src="{{ asset('backend/public') }}/img/logo-mini.png" alt="Biyercard"
+                style="width: auto; height: 30px;">
+            <img class="side-nav-hide-on-closed" src="{{ asset('backend/public') }}/img/logo-big.png" alt="Biyercard"
+                style="width: auto; height: 44px;">
         </a>
         <!-- End Logo For Desktop View -->
     </div>
