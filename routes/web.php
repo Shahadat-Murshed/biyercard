@@ -9,7 +9,8 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $route = Auth::user()->role . '.dashboard';
+    return redirect()->route($route);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -20,4 +21,4 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__ . '/auth.php';
 
-Route::get('admin/login', [AdminController::class, 'login'])->name('admin.login');
+Route::get('admin/login', [AdminController::class, 'login'])->middleware('redirectlogin')->name('admin.login');

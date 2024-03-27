@@ -78,9 +78,9 @@
                 <a id="profileMenuInvoker" class="header-complex-invoker" href="#" aria-controls="profileMenu" aria-haspopup="true"
                     aria-expanded="false" data-unfold-event="click" data-unfold-target="#profileMenu" data-unfold-type="css-animation"
                     data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
-                    <!--img class="avatar rounded-circle mr-md-2" src="#" alt="John Doe"-->
+                    <img class="avatar rounded-circle mr-md-2" src="#" alt="John Doe">
                     <span class="mr-md-2 avatar-placeholder">J</span>
-                    <span class="d-none d-md-block">John Doe</span>
+                    <span class="d-none d-md-block">{{ Auth::user()->name }}</span>
                     <i class="gd-angle-down d-none d-md-block ml-2"></i>
                 </a>
 
@@ -96,12 +96,19 @@
                         </a>
                     </li>
                     <li class="unfold-item unfold-item-has-divider">
-                        <a class="unfold-link d-flex align-items-center text-nowrap" href="#">
-                            <span class="unfold-item-icon mr-3">
-                                <i class="gd-power-off"></i>
-                            </span>
-                            Sign Out
-                        </a>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <a class="unfold-link d-flex align-items-center text-nowrap" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                            this.closest('form').submit();">
+                                <span class="unfold-item-icon mr-3">
+                                    <i class="gd-power-off"></i>
+                                </span>
+                                Log Out
+                            </a>
+
+                        </form>
                     </li>
                 </ul>
             </div>

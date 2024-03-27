@@ -45,7 +45,7 @@
                                     <div class="form-group">
                                         <label for="email">E-Mail Address</label>
                                         <input id="email" type="email" class="form-control" name="email" required=""
-                                            autofocus="">
+                                            value="{{ old('email') }}" autofocus="">
                                     </div>
 
                                     <div class="form-group">
@@ -53,9 +53,14 @@
                                         </label>
                                         <input id="password" type="password" class="form-control" name="password" required="">
                                     </div>
+                                    @if ($errors->has('email'))
+                                        <div class="mb-4" style="color: red">{{ $errors->first('email') }}</div>
+                                    @elseif ($errors->has('password'))
+                                        <div class="mb-4" style="color: red">{{ $errors->first('email') }}</div>
+                                    @endif
 
                                     <div class="form-group no-margin">
-                                        <button type="submit" class="btn btn-primary btn-block">
+                                        <button type="submit" class="btn btn-primary btn-block  mt-5">
                                             Login
                                         </button>
                                     </div>
